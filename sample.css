@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e3e3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e4d2b;
+    padding: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero {
+    background-image: url('forest-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff8c00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff5722;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.photo-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+    background-color: #fff;
+}
+
+footer {
+    background-color: #1e4d2b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e4d2b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide 10s infinite linear;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-800%); /* Adjust based on the number of images */
+    }
+}
+
+footer {
+    background-color: #1e4d2b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body { 
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+  }
+  
+  section {
+    padding: 25vh 10%;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    transform-style: inherit;
+  }
+  
+  section, section:before {
+    background: 50% 50% / cover;
+  }
+  
+  section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* The brightest duotone color */
+  .darken::before {
+    background-color: rgba(221, 204, 0, 1);
+  }
+  
+  /* The darkest duotone color */
+  .lighten::after {
+    background-color: rgba(221, 0, 0, 1);
+  }
+  
+  #hero-1:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-04.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+  
+  #hero-2:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-10.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+  }
+  
+  #hero-3:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/mini-rocketman-261.jpg");
+      background-attachment: fixed;
+    z-index: -3;
+  }
+  
+  .normal-scroll {
+    background: #fff;
+    transform: translateZ(0);
+  }
+  
+  .container {
+    color: #ccc;
+    font-size: 4vw;
+    margin: 0 auto;
+    padding: 25vh 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      #section-5:before {
+          background-attachment: scroll;
+      }
+  }

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Forest Retreat</title>
+    <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Colorful Forest Retreat</h1>
+            <p>Experience the magic of the forest in vibrant colors.</p>
+            <a href="#contact" class="cta-button">Book Now</a>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="photo1.jpg" alt="Image 1">
+                <img src="photo2.jpg" alt="Image 2">
+                <img src="photo3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <section class="slider-container">
+            <div class="slider">
+               
+            </div>
+        </section>
+    </section>
+    <section id="hero-1">
+      <div class="container">
+        Parallax section 1
+      </div>
+    </section>
+    
+    <section class="normal-scroll">
+      <div class="container">
+        Content section 2
+      </div>
+    </section>
+    
+    <section id="hero-2">
+      <div class="container">
+        Parallax section 2
+      </div>
+    </section>
+    
+    <section class="normal-scroll">
+      <div class="container">
+        Content section 4
+      </div>
+    </section>
+    
+    <section id="hero-3">
+      <div class="container">
+        Parallax section 5
+      </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to book your stay, please contact us:</p>
+        <ul>
+            <li>Email: info@colorfulforestretreat.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+        </ul>
+        <a href="mailto:info@colorfulforestretreat.com" class="cta-button">Email Us</a>
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 Colorful Forest Retreat. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+html,
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+.container {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+}
+
+section {
+  background-size: cover;
+  color: white;
+  background-color: var(--bg, --color-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.image {
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: cover;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+    height: 100vh;
+  }
+  &.text {
+    height: 50vh;
+  }
+  &.heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px) scale(1.5);
+  }
+}
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3{
+    font-weight: normal; 
+    color: var(--color-blue);
+  }
+}
+
+<!-- new parrale html -->
+<div id="title" class="slide header">
+    <h1>Pure CSS Parallax</h1>
+  </div>
+  
+  <div id="slide1" class="slide">
+    <div class="title">
+      <h1>Slide 1</h1>
+      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+    </div>
+  </div>
+  
+  <div id="slide2" class="slide">
+    <div class="title">
+      <h1>Slide 2</h1>
+      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+    </div>
+    <img src="https://picsum.photos/980/600">
+    <img src="https://picsum.photos/960/600"> 
+  </div>
+  
+  <div id="slide3" class="slide">
+    <div class="title">
+      <h1>Slide 3</h1>
+      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+    </div>
+  </div>
+  
+  <div id="slide4" class="slide header">
+      <h1>The End</h1>
+  </div>
+  <!-- prallel css -->
+  @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 250%
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("https://picsum.photos/640/480");
+  z-index:2;
+}
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1:before {
+  background-image: url("https://picsum.photos/960/520");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("https://picsum.photos/960/400");
+  z-index:2;
+}
+
+#slide3:before {
+  background-image: url("https://picsum.photos/980/600");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #222;
+}
+  <!-- parrallel effoct 2 -->
+  <section id="hero-1">
+    <div class="container">
+      Parallax section 1
+    </div>
+  </section>
+  
+  <section class="normal-scroll">
+    <div class="container">
+      Content section 2
+    </div>
+  </section>
+  
+  <section id="hero-2">
+    <div class="container">
+      Parallax section 2
+    </div>
+  </section>
+  
+  <section class="normal-scroll">
+    <div class="container">
+      Content section 4
+    </div>
+  </section>
+  
+  <section id="hero-3">
+    <div class="container">
+      Parallax section 5
+    </div>
+  </section>
+      <!-- parrallel effoct 2 -->
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body { 
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+  }
+  
+  section {
+    padding: 25vh 10%;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    transform-style: inherit;
+  }
+  
+  section, section:before {
+    background: 50% 50% / cover;
+  }
+  
+  section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* The brightest duotone color */
+  .darken::before {
+    background-color: rgba(221, 204, 0, 1);
+  }
+  
+  /* The darkest duotone color */
+  .lighten::after {
+    background-color: rgba(221, 0, 0, 1);
+  }
+  
+  #hero-1:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-04.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+  
+  #hero-2:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/MINI-Rocketman-Concept-10.jpg");
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+  }
+  
+  #hero-3:before {
+    background-image: url("http://cdn.bmwblog.com/wp-content/uploads/mini-rocketman-261.jpg");
+      background-attachment: fixed;
+    z-index: -3;
+  }
+  
+  .normal-scroll {
+    background: #fff;
+    transform: translateZ(0);
+  }
+  
+  .container {
+    color: #ccc;
+    font-size: 4vw;
+    margin: 0 auto;
+    padding: 25vh 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      #section-5:before {
+          background-attachment: scroll;
+      }
+  }
+      <!-- horizontal html and css 1 -->
+
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Gallery With Horizontal Scroll</h2>
+<p>Use the horizontal scrollbar to see the other images.</p>
+
+<div class="scroll-container">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+</div>
+
+<p>Note that the images are of same size.</p>
+
+</body>
+</html>
+    
+
+    <!-- horizontal html and css 2 -->
+
+
+    <div id="page">
+        <div>1</div>
+        <div>2</div>
+    <div>Last</div>
+    </div>
+       
+
+        <!-- css 2 -->
+
+
+        body {
+            overflow-x: hidden;
+            font-family: sans-serif;
+            font-size: 4rem;
+        
+        }
+        #page {
+            overflow:hidden;
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: no-wrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            div {
+                flex: 0 0 100vw;
+                height: 100vh;
+                position: relative;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                background-color: #76dbd1;
+                color: #fbfbfb;
+            }
+            div:nth-of-type(2){
+                background-color: #89f8ce;
+                
+            }
+            div:nth-of-type(3){
+                background-color: #ff6473;
+                
+            }
+        }
+        
+        
+              <!-- js 2         -->
+
+              const page = document.getElementById('page');
+const panes = page.children;
+let dummyX = null;
+let lastPane = panes[panes.length - 1];
+
+window.onscroll = function(){
+	let y = document.body.getBoundingClientRect().top;
+	console.log(document.body.getBoundingClientRect());
+	page.scrollLeft = -y;
+}
+
+window.onresize = resize;
+
+resize();
+
+function resize(){
+	let w = page.scrollWidth - window.innerWidth + window.innerHeight;
+	document.body.style.height = w +'px';
+	
+	dummyX = lastPane.getBoundingClientRect().left+window.scrollY;
+} 
+
+
+
+     <!-- horizontal 3 -->
+
+     <html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="styles.css">
+   <title>Horizontal Scroll with Flex-box</title>
+</head>
+<body>
+   
+   <section class="card">
+         
+      <div class="card--content">
+         
+         <img src="https://images.pexels.com/photos/449627/pexels-photo-449627.jpeg?auto=compress&cs=tinysrgb&h=350">
+        <figcaption>Your text</figcaption> 
+
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/358358/pexels-photo-358358.jpeg?auto=compress&cs=tinysrgb&h=350">
+                <figcaption>Your text</figcaption> 
+
+      </div>
+      <div class="card--content">
+           
+       
+        <img src="https://images.pexels.com/photos/458917/pexels-photo-458917.jpeg?auto=compress&cs=tinysrgb&h=350">
+                <figcaption>Your text</figcaption> 
+
+      </div>
+     
+     
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/358416/pexels-photo-358416.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/330260/pexels-photo-330260.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/208340/pexels-photo-208340.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/916044/pexels-photo-916044.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/417239/pexels-photo-417239.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content">
+            <img src="https://images.pexels.com/photos/261053/pexels-photo-261053.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+      <div class="card--content"><img src="https://images.pexels.com/photos/462126/pexels-photo-462126.jpeg?auto=compress&cs=tinysrgb&h=350">
+      </div>
+    </section>
+   
+    
+   
+</body>
+</html>
+
+
+    <!-- horizontal css 3 -->
+
+
+    html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #0d0c0e;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+   background-color: #fff;
+   min-width: 100%;
+   min-height: 200px;
+ }
+
+ .card{
+    display: flex;
+ }
+
+ .card--content{
+    
+    min-width: 350px;
+ }
+
+ .card{
+    overflow-x: auto;
+ }
+figcaption
+{ 
+position: absolute; /* To place the text on the image*/
+top: 200px; /* The exact location of the text from the top of the image*/
+left: 0; /* Other beautification stuff */
+width: 100%; 
+}
+ 
+/* use this webkit to hide the scroll bar */
+ /*.card::-webkit-scrollbar{
+    display: none;
+ }
+ */
+
+
+<!-- 
+    hor button 4 html and css -->
+
+    <div class="wrap">
+        <header>
+            <label for="slide-1-trigger">Slide One</label>
+            <label for="slide-2-trigger">Slide Two</label>
+            <label for="slide-3-trigger">Slide Three</label>
+            <label for="slide-4-trigger">Slide Four</label>
+        </header>
+    
+        <input id="slide-1-trigger" type="radio" name="slides" checked>
+        <section class="slide slide-one">
+            <h1>Pure CSS Slider</h1>
+        </section>
+        <input id="slide-2-trigger" type="radio" name="slides">
+        <section class="slide slide-two">
+            <h1>Headline Two</h1>
+        </section>
+        <input id="slide-3-trigger" type="radio" name="slides">
+        <section class="slide slide-three">
+            <h1>Headline Three</h1>
+        </section>
+        <input id="slide-4-trigger" type="radio" name="slides">
+        <section class="slide slide-four">
+            <h1>Headline Four</h1>
+        </section>
+    
+    </div>
+
+
+
+    <!-- hor button 4 html and css --> -->
+      
+      
+    @import url(https://fonts.googleapis.com/css?family=Audiowide);
+//mixins
+@mixin bp($bp, $min-max: min-width) {
+    $em: $bp/16;
+    @media(#{$min-max}: #{$em}em) {
+        @content;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+*,
+*:before,
+*:after  { box-sizing: inherit; }
+
+h1 { 
+    color: #fff;
+    font-family: "Audiowide", cursive;
+    font-size: 2em;
+    font-size: 6vw;
+    line-height: 1.2;
+    margin: 0.5em 0 3em;
+    text-shadow: 1px 1px 1px #333;
+}
+
+@include bp(1075) { h1 { font-size: 4em; } }
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #120103;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background: #3E474F;
+    box-shadow: 0 .5em 1em #111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    
+    label {
+        color: #788188;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 4.25em;
+        font-size: .75em;
+        font-weight: bold;
+        padding: 0 1em;
+    }
+}
+
+header label:hover {
+    background: #2e353b;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding:  8em 1em 0;
+    background-color: #120103;
+    background-position: 50% 50%;
+    background-size: cover;
+    transition: left 0s .75s;        
+    
+    &-one { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/starryFarm.jpg'); }
+
+    &-two { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/campusDarkDays.jpg'); }
+
+    &-three { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/autumn.jpg'); }
+
+    &-four { background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/lakehouse.jpg'); }
+    
+    h1 {
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform .5s .5s, opacity .5s;
+    }
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
+    
+    & h1 {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all .5s .5s;
+    }
+}
+
+
+
+
+
+
+
+
