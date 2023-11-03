@@ -1,0 +1,95 @@
+/* Add your CSS styles here */
+
+/* Example styles for header and navigation */
+header {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Example styles for hero section */
+#hero {
+  background-image: url('path/to/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 36px;
+}
+
+#hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Example styles for rooms section */
+#rooms {
+  padding: 50px;
+}
+
+#rooms h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Example styles for amenities section */
+#amenities {
+  padding: 50px;
+}
+
+#amenities h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* Add your CSS styles here */
+#myButton {
+  width: 200px;
+  height: 50px;
+}
+
+/* Example styles for contact section */
+#contact {
+  padding: 50px;
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Example styles for footer */
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
